@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--登陆界面  -->
+    <string name="app_name">MyWork</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">账号:</string>
+    <string name="hint_username">请输入账号</string>
+    <string name="password">密码:</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="btn_login">登陆</string>
+    <string name="btn_register">注册</string>
+    <string name="checkbox_savepwd">保存密码</string>
+    <string name="checkbox_autologin">自动登陆</string>
+    <string name="find_pwd">找回密码</string>
+    
+    <!-- 注册页面 -->
+	<string name="register_name">新账号：</string>
+	<string name="register_password">密码：</string>
+	<string name="register_again_password">密码确认：</string>
+	<string name="register_hint">请再次输入密码</string>
+	<string name="register_hint2">请输入邮箱</string>
+	<string name="register_hint3">请输入宿舍号</string>
+	<string name="register_btnname">确认</string>
+	<string name="errortip_name">*用户名已存在</string>
+	<string name="errortip_name2">*输入不能为空</string>
+	<string name="errortip_password">*密码不能为空</string>
+	<string name="errortip_password2">*密码不一致</string>
+	<string name="register_mailbox">注册邮箱：</string>
+	<string name="register_dormitory">宿舍号：</string>
+	
+    <!--找回密码  -->
+    <string name="requestpassword_name">账号：</string>
+    <string name="requestpassword_mailbox">注册邮箱：</string>
+    <string name="requestpassword_password">重设密码：</string>
+    <string name="requestpassword_again_password">确认密码：</string>
+    <string name="btn_requestpassword">确认</string>
+    
+    
+    
+	<string name="querycosts">查询费用</string>
+	<string name="repairs">报修</string>
+	<string name="buy">购物</string>
+	<string name="borrow">互借版块</string>
+	<string name="organization">社团</string>
+	<string name="one">待拓展1</string>
+	<string name="two">待拓展2</string>
+	
+	<!--底下导航栏  -->
+	<string name="home_page">首页</string>
+	<string name="mine">我的</string>
+	<string name="more_one">我要买</string>
+	<string name="more_two">社团</string>
+	
+	<!--我的  -->
+	<string name="myname">航少86</string>
+	<string name="personalized_signature">个性签名：这是我的个性签名</string>
+	
+	<!--校购  -->
+	<string name="listitem">varlald旗舰店</string>
+	<string name="xiaoliang">销量61件              共131件宝贝</string>
+	<string name="btnname">进店</string>
+	
+	<!--外卖  -->
+	<string name="firstr_canteen">一饭</string>
+	<string name="second_canteen">二饭</string>
+	<string name="third_canteen">三饭</string>
+	<string name="fourth_canteen">四饭</string>
+	
+	<string name="shopname">航少餐吧</string>
+	<string name="shopname2">扇味黄焖鸡米饭</string>
+	<string name="shopname3">馋嘴猫烤肉拌饭</string>
+	
+	<string name="sales_volume_permonth">月销1378单</string>
+	<string name="sales_volume_permonth2">月销1022单</string>
+	<string name="sales_volume_permonth3">月销1222单</string>
+	
+	<string name="begin_end">起送￥0|配送￥0</string>
+	<string name="begin_end2">起送￥12|配送￥0</string>
+	<string name="begin_end3">起送￥10|配送￥0</string>
+	
+	<string name="discount1">部分第二份半价</string>
+	<string name="discount12">满18减1;满33减2</string>
+	<string name="discount13">满10减2;满20减3;满40减5</string>
+	
+	<string name="discount2">新用户立减3元，首次使用银行卡支付最高再减3元</string>
+	<string name="discount22">折扣商品8折起</string>
+	<string name="discount23">折扣商品7.35折起</string>
+	
+	<string name="discounttext1">半</string>
+	<string name="discounttext2">首</string>
+	<string name="discounttext3">折</string>
+	<string name="discounttext4">减</string>
+	
+	<!--社团  -->
+	<string name="clubname1">社团：心协联盟</string>
+	<string name="clubname2">社团：乒乓球俱乐部</string>
+	
+	<string name="clubtheme">主题：迎新晚会</string>
+	<string name="clubtheme2">主题：社团招新</string>
+	
+	<string name="clubtime">时间：2月27日   19:00~21:00</string>
+	<string name="clubaddress">地点：周末文化广场</string>
+	<string name="clubpatron">赞助方：来邦科技股份有限公司</string>
+	<string name="clubremark">介时还有其他礼品送哦~</string>
+	
+	<string name="clubtime2">时间：2月28日  9:00~14:00</string>
+	<string name="clubaddress2">地点：西七</string>
+	<string name="clubpatron2">赞助方：腾讯科技股份有限公司</string>
+	<string name="clubremark2">奖品丰富，到场有份！</string>
+	
+	
+	
+	<!-- 缴纳电费 -->
+	<string name="btnpay">缴纳电费</string>
+	<string name="balance">余额:</string>
+	<string name="next_month">下一个月结日:</string>
+	<string name="available_thismonth">本月可用:</string>
+	<string name="cost_thismonth">本月消费：</string>
+	<string name="balance_endmonth">本月末余额:</string>
+	
+	<string name="surplus_lastmonth">上月结余:</string>
+	<string name="return_thismonth">本月返还:</string>
+	<string name="gift_thismonth">本月赠送:</string>
+	<string name="recharge_thismonth">本月充值:</string>
+	
+	<string name="data1">28.73元</string>
+	<string name="data2">0.00元</string>
+	<string name="data3">20.00元</string>
+	<string name="data4">80.00元</string>
+	
+	<!--报修  -->
+	<string name="domitoryInfo">西一531</string>
+	<string name="tv_tip">位置-></string>
+	<string-array name="repair_name" >
+	    <item>风扇</item>
+	    <item>电灯</item>
+	    <item>水龙头</item>
+	    <item>床</item>
+	    <item>椅子</item>
+	    <item>热水</item>
+	    <item>门</item>
+	    <item>其它</item>
+	</string-array>
+	
+	<string-array name="fan_location">
+	    <item>前风扇（进门第一个）</item>
+	    <item>后风扇（进门第二个）</item>
+	</string-array>
+	
+	<string-array name="bulb_location">
+	    <item>寝室</item>
+	    <item>阳台</item>
+	    <item>厕所</item>
+	</string-array>
+	
+	<string-array name="tap_location">
+	    <item>阳台</item>
+	    <item>厕所</item>
+	</string-array>
+	
+	<string-array name="bedchair_location">
+	    <item>01号</item>
+	    <item>02号</item>
+	    <item>03号</item>
+	    <item>04号</item>
+	</string-array>
+	
+	<string-array name="hotwater_location">
+	    <item>花洒</item>
+	    <item>热水表</item>
+	</string-array>
+	
+	<string-array name="door_location">
+	    <item>宿舍大门</item>
+	    <item>厕所门</item>
+	    <item>阳台门</item>
+	</string-array>
+	
+	<string name="btn_increase">添加</string>
+	<string name="btn_decrease">减少</string>
+	<string name="btn_submit">提交</string>
+	<string name="edittext_hint">请输入详细信息</string>
+	
+	
+	<string name="fileUpload">文件上传</string>
+	 <string name="file_path">文件名</string>
+    <string name="file_content">文件内容</string>
+    <string name="parent">父目录</string>
+	
+	
+	
+	
+</resources>

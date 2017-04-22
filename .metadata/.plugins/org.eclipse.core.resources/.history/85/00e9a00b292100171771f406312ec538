@@ -1,0 +1,268 @@
+package com.zqh.mywork;
+
+import com.example.mywork.R;
+
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.renderscript.Element;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class RegisterActivity  extends Activity{
+	private MySQL dbHelper;
+	private SQLiteDatabase  db;
+	private EditText register_etname;
+	private EditText register_et_mailboxname;
+	private EditText register_et_dormitoryname;
+	private EditText register_etpassword;
+	private EditText register_again_etpassword;
+	private TextView register_errortip_name;
+	private TextView register_errortip_mailbox;
+	private TextView register_errortip_dormitory;
+	private TextView register_errortip_password;
+	private TextView register_errortip_again_password;
+	private static int countsofdormitory=4;
+	
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+	   // TODO Auto-generated method stub
+	   super.onCreate(savedInstanceState);
+	   setContentView(R.layout.register_activity);
+	   register_etname=(EditText) findViewById(R.id.register_etname);
+	   register_et_mailboxname=(EditText) findViewById(R.id.register_et_mailboxname);
+	   register_et_dormitoryname=(EditText) findViewById(R.id.register_et_dormitoryname);
+	   register_etpassword=(EditText) findViewById(R.id.register_etpassword);
+	   register_again_etpassword=(EditText) findViewById(R.id.register_again_etpassword);
+	   register_errortip_name=(TextView) findViewById(R.id.register_errortip_name);
+	   register_errortip_mailbox=(TextView) findViewById(R.id.register_errortip_mailbox);
+	   register_errortip_dormitory=(TextView) findViewById(R.id.register_errortip_dormitory);
+	   register_errortip_password=(TextView) findViewById(R.id.register_errortip_password);
+	   register_errortip_again_password=(TextView) findViewById(R.id.register_errortip_again_password);
+	    
+	 /*  dbHelper=new MySQL(this, "User.db", null, 1);
+	   db=dbHelper.getWritableDatabase();*/
+	   FocusProc();
+   }
+   public void FocusProc()
+   {
+	  
+	  
+	   register_etname.addTextChangedListener(new TextWatcher() {
+		
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			// TODO Auto-generated method stub
+			 
+			if(TextUtils.isEmpty(register_etname.getText()))
+			{
+				   register_errortip_name.setText(R.string.errortip_name2);
+				   register_errortip_name.setVisibility(View.VISIBLE);
+			}
+			else
+			{
+				   register_errortip_name.setVisibility(View.INVISIBLE);
+				   String sql_username="select count(*) from User where username='"+register_etname.getText().toString()+"'";
+				   Cursor cursor=db.rawQuery(sql_username, null);
+				   cursor.moveToFirst();
+				   if( cursor.getLong(0)>0)
+				   {
+					   register_errortip_name.setText(R.string.errortip_name);
+				       register_errortip_name.setVisibility(View.VISIBLE);
+				   }
+			}
+			
+		}
+		
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void afterTextChanged(Editable s) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	   register_et_mailboxname.addTextChangedListener(new TextWatcher() {
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			// TODO Auto-generated method stub
+			if(TextUtils.isEmpty(register_et_mailboxname.getText()))
+			{
+				register_errortip_mailbox.setText("注册邮箱不能为空");
+				register_errortip_mailbox.setVisibility(View.VISIBLE);
+			}
+			else
+			{
+				
+				 register_errortip_mailbox.setVisibility(View.INVISIBLE);
+				 String sql_email="select count(*) from User where email='"+register_et_mailboxname.getText().toString()+"'";
+				 Cursor cursor=db.rawQuery(sql_email, null);
+				 cursor.moveToFirst();
+				 if(cursor.getLong(0)>0)
+				 {
+					 register_errortip_mailbox.setText("注册邮箱已存在");
+					 register_errortip_mailbox.setVisibility(View.VISIBLE);
+		         }
+			}
+		}
+		
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void afterTextChanged(Editable s) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	   register_et_dormitoryname.addTextChangedListener(new TextWatcher() {
+		
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			// TODO Auto-generated method stub
+			if(TextUtils.isEmpty(register_et_dormitoryname.getText()))
+			{
+				register_errortip_dormitory.setText("注册宿舍号不能为空");
+				register_errortip_dormitory.setVisibility(View.VISIBLE);
+			}
+			else
+			{
+				register_errortip_dormitory.setVisibility(View.INVISIBLE);
+				String sqldormitory="select count(*) from User where dormitory='"+register_et_dormitoryname.getText().toString()+"'";
+				Cursor cursor=db.rawQuery(sqldormitory, null);
+				cursor.moveToFirst();
+				if(cursor.getLong(0)>countsofdormitory)
+				{
+					register_errortip_dormitory.setText("该宿舍已注册人数已满");
+					register_errortip_dormitory.setVisibility(View.VISIBLE);
+				}
+			}
+		}
+		
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void afterTextChanged(Editable s) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	   register_etpassword.addTextChangedListener(new TextWatcher() {
+		
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			// TODO Auto-generated method stub
+			if(TextUtils.isEmpty(register_etpassword.getText()))
+			{
+				register_errortip_password.setText("注册密码不能为空");
+				register_errortip_password.setVisibility(View.VISIBLE);
+			}
+			else
+			{
+				register_errortip_password.setVisibility(View.INVISIBLE);
+			}
+		}
+		
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void afterTextChanged(Editable s) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	   register_again_etpassword.addTextChangedListener(new TextWatcher() {
+		
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			// TODO Auto-generated method stub
+			if(TextUtils.isEmpty(register_again_etpassword.getText()))
+			{
+				register_errortip_again_password.setText("重复密码输入不能为空");
+				register_errortip_again_password.setVisibility(View.VISIBLE);
+			}
+			else
+			{
+				register_errortip_again_password.setVisibility(View.INVISIBLE);
+			}
+		}
+		
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void afterTextChanged(Editable s) {
+			// TODO Auto-generated method stub
+		
+		}
+	});
+   }
+   public void  OnClick(View v)
+   {
+		if(!TextUtils.isEmpty(register_etpassword.getText()) && !register_etpassword.getText().toString().equals(register_again_etpassword.getText().toString()) )
+		{
+			register_errortip_again_password.setText("两次密码输入不一致");
+			register_errortip_again_password.setVisibility(View.VISIBLE);
+		}
+		else{
+	  /*  String sql="insert into User (username,password,email,Dormitory) Values ('"
+			  +register_etname.getText().toString() +"','"
+			  +register_etpassword.getText().toString() +"','"
+			  +register_et_mailboxname.getText().toString()+"','"
+			  +register_et_dormitoryname.getText().toString()+"')";
+	    if(!TextUtils.isEmpty(register_etname.getText()) && !TextUtils.isEmpty(register_etpassword.getText()) && 
+			 !TextUtils.isEmpty(register_et_mailboxname.getText()) && !TextUtils.isEmpty(register_et_dormitoryname.getText()) && 
+			  !TextUtils.isEmpty(register_again_etpassword.getText())){
+		  db.execSQL(sql);
+		  db.close();
+	    	}*/
+			Builder builder=new AlertDialog.Builder(this);
+			builder.setTitle("注册成功提示");
+			builder.setMessage("注册成功！");
+			builder.setPositiveButton("确定", new OnClickListener() {
+				
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO Auto-generated method stub
+					startActivity(new Intent(RegisterActivity.this,Login.class));
+				}
+			});
+		}
+	  
+   }
+ 
+   
+	   
+   
+}

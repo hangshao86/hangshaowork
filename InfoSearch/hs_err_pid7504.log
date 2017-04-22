@@ -1,0 +1,84 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:2923), pid=7504, tid=11480
+#  Error: ShouldNotReachHere()
+#
+# Java VM: Java HotSpot(TM) Client VM (11.0-b15 mixed mode windows-x86)
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x019c1c00):  JavaThread "Unknown thread" [_thread_in_vm, id=11480, stack(0x00170000,0x001c0000)]
+
+Stack: [0x00170000,0x001c0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x019c1c00 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=11480, stack(0x00170000,0x001c0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	D:\Java\jre6\bin\javaw.exe
+0x771d0000 - 0x7730c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75fd0000 - 0x760a4000 	C:\Windows\system32\kernel32.dll
+0x753d0000 - 0x7541b000 	C:\Windows\system32\KERNELBASE.dll
+0x75d10000 - 0x75db0000 	C:\Windows\system32\ADVAPI32.dll
+0x75b60000 - 0x75c0c000 	C:\Windows\system32\msvcrt.dll
+0x75c60000 - 0x75c79000 	C:\Windows\SYSTEM32\sechost.dll
+0x75dd0000 - 0x75e71000 	C:\Windows\system32\RPCRT4.dll
+0x75a00000 - 0x75ac9000 	C:\Windows\system32\USER32.dll
+0x75f80000 - 0x75fce000 	C:\Windows\system32\GDI32.dll
+0x75e80000 - 0x75e8a000 	C:\Windows\system32\LPK.dll
+0x77350000 - 0x773ed000 	C:\Windows\system32\USP10.dll
+0x75db0000 - 0x75dcf000 	C:\Windows\system32\IMM32.DLL
+0x75830000 - 0x758fc000 	C:\Windows\system32\MSCTF.dll
+0x7c340000 - 0x7c396000 	D:\Java\jre6\bin\msvcr71.dll
+0x6d800000 - 0x6da56000 	D:\Java\jre6\bin\client\jvm.dll
+0x73490000 - 0x734c2000 	C:\Windows\system32\WINMM.dll
+0x75250000 - 0x7529b000 	C:\Windows\system32\apphelp.dll
+0x6d280000 - 0x6d288000 	D:\Java\jre6\bin\hpi.dll
+0x75820000 - 0x75825000 	C:\Windows\system32\PSAPI.DLL
+0x6d7b0000 - 0x6d7bc000 	D:\Java\jre6\bin\verify.dll
+0x6d320000 - 0x6d33f000 	D:\Java\jre6\bin\java.dll
+0x6d7f0000 - 0x6d7ff000 	D:\Java\jre6\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK -Xbootclasspath:D:\AndroidEnv\android-sdk-windows\android-sdk-windows\platforms\android-16\android.jar 
+java_command: iet.jxufe.cn.android.AccessToServer
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Java\jdk1.6.0_10
+CLASSPATH=.;D:\Java\jdk1.6.0_10\lib;
+PATH=D:/Java/jre6/bin/client;D:/Java/jre6/bin;D:/Java/jre6/lib/i386;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\Java\jdk1.6.0_10\bin;C:\Program Files\Common Files\Adobe\AGL;D:\AndroidEnv\android-sdk-windows\android-sdk-windows\tools;D:\AndroidEnv\android-sdk-windows\android-sdk-windows\platform-tools;C:\Program Files\MySQL\MySQL Server 5.0\bin;D:\AndroidEnv\eclipse-jee-juno-win32\eclipse;
+USERNAME=dream
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7600 
+
+CPU:total 2 (8 cores per cpu, 2 threads per core) family 6 model 10 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, ht
+
+Memory: 4k page, physical 2097151k(919012k free), swap 4194303k(2241100k free)
+
+vm_info: Java HotSpot(TM) Client VM (11.0-b15) for windows-x86 JRE (1.6.0_10-rc2-b32), built on Sep 12 2008 00:52:11 by "java_re" with MS VC++ 7.1
+
+time: Tue Mar 05 21:59:56 2013
+elapsed time: 0 seconds
+

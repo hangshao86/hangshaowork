@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+  	<ImageView android:layout_width="50dp"
+  	    	   android:layout_height="50dp"
+  	    	   android:id="@+id/iv_head"
+  	    	   android:src="@drawable/hang"
+  	    />
+  	<TextView android:layout_width="wrap_content"
+  	    	  android:layout_height="wrap_content"
+  	    	  android:id="@+id/tv_name"
+  	    	  android:layout_toRightOf="@+id/iv_head"
+  	    	  android:text="@string/myname" 
+  	    	  android:layout_marginLeft="10dp"
+  	    	  
+  	    	  
+  	    />
+  	<TextView android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:id="@+id/tv_other"
+  	          android:layout_alignLeft="@+id/tv_name"
+  	          android:layout_below="@+id/tv_name"
+  	          android:text="@string/xiaoliang"
+  	          android:textSize="10sp"
+  	          android:textColor="#BDBDBD"
+  	          />
+  	<Button   android:layout_width="wrap_content"
+  	    	  android:layout_height="wrap_content"
+  	    	  android:id="@+id/btn_in"
+  	    	  android:layout_below="@+id/tv_name"
+  	    	  android:layout_alignParentRight="true"
+  	    	  android:text="@string/btnname"
+  	    	  android:layout_alignTop="@+id/tv_name"
+  	    	  android:layout_alignBottom="@+id/tv_other"
+  	    	  android:layout_marginRight="10dp"
+  	    	  android:layout_marginTop="10dp"
+  	    	  android:textSize="15sp"
+  	    	  android:background="#F8F8F8"  
+  	    />
+
+	<ImageView
+	    android:id="@+id/iv_shangbiao"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/iv_head"
+	    android:layout_below="@+id/tv_other"
+	    android:layout_toRightOf="@+id/iv_head"
+	    android:layout_marginLeft="10dp"
+	    android:adjustViewBounds="true"
+	    android:maxHeight="20dp"
+	    android:maxWidth="300dp"
+	    android:src="@drawable/shangbiao2" />
+
+	<LinearLayout android:layout_width="match_parent"
+	    		  android:layout_height="100dp"
+	    		  android:layout_below="@+id/iv_head"
+	    		  android:orientation="horizontal"
+	     >
+	     <ImageView android:layout_width="0dp"
+            	   android:layout_height="match_parent"
+            	   android:layout_weight="1"
+            	   android:id="@+id/iv_display1"
+            	   android:src="@drawable/cloth1"
+            	   android:background="@drawable/imageview_backgroup"/>
+        <ImageView android:layout_width="0dp"
+            	   android:layout_height="match_parent"
+            	   android:layout_weight="1"
+            	    android:id="@+id/iv_display2"
+        		   android:src="@drawable/cloth2"
+        		   android:background="@drawable/imageview_backgroup"/>
+        <ImageView android:layout_width="0dp"
+            	   android:layout_height="match_parent"
+            	   android:layout_weight="1"
+            	    android:id="@+id/iv_display3"
+                   android:src="@drawable/cloth3"
+                   android:background="@drawable/imageview_backgroup"/>
+	</LinearLayout>
+</RelativeLayout>

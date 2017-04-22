@@ -1,0 +1,120 @@
+package com.zqh.mywork;
+
+import java.io.File;
+import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class SelectFileActivity extends Activity {
+	private TextView showPath;
+	private Button parentBn;
+	private ListView listFile;
+	private File parentFile;
+	private File[] files;
+
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_select);
+		showPath = (TextView) findViewById(R.id.showPath);
+		parentBn = (Button) findViewById(R.id.parentBn);
+		listFile = (ListView) findViewById(R.id.listFile);
+		parentFile = new File("/mnt/sdcard/");
+		System.out.println(parentFile);
+		files = parentFile.listFiles();
+		init();
+		inflateListFile();
+		listFile.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				if(files[position].isFile()){
+					Intent intent=new Intent();
+					intent.putExtra("filePath", files[position].getAbsolutePath());
+					setResult(0,intent);
+					finish();							
+				}else{
+					File[] temp=files[position].listFiles();
+					if(temp==null||temp.length==0){
+						Toast.makeText(SelectFileActivity.this, "不包含符合要求的文件！",Toast.LENGTH_LONG).show();
+					}else{
+						parentFile=files[position];						
+						files=temp;						
+						inflateListFile();
+					}
+				}
+				
+			}			
+		});
+		
+		parentBn.setOnClickListener(new OnClickListener() {			
+			public void onClick(View v) {
+				try{
+					if(!parentFile.getCanonicalPath().equals("/mnt/sdcard")){
+						parentFile=parentFile.getParentFile();
+						files=parentFile.listFiles();
+						inflateListFile();
+					}
+				}catch(Exception ex){
+					ex.printStackTrace();
+				}				
+			}
+		});
+	}
+
+	public void inflateListFile() {
+		try{
+			showPath.setText(parentFile.getCanonicalPath());
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		
+		List<Map<String, Object>> listItems = new ArrayList<Map<String, Object>>();
+		for (int i = 0; i < files.length; i++) {
+			Map<String, Object> item = new HashMap<String, Object>();
+			if (files[i].isDirectory()) {
+				item.put("icon", R.drawable.folder);
+			} else {
+				item.put("icon", R.drawable.file);
+			}
+			item.put("fileName", files[i].getName());
+			listItems.add(item);
+		}
+		SimpleAdapter simpleAdapter = new SimpleAdapter(this, listItems,
+				R.layout.item, new String[] { "icon", "fileName" }, new int[] {
+						R.id.icon, R.id.fileName });
+		listFile.setAdapter(simpleAdapter);
+
+	}
+
+	public void init() {
+		System.out.println("init invoked!");
+		try{
+			File sdCardDir=Environment.getExternalStorageDirectory();
+			for(int i=0;i<5;i++){
+				File destFile=new File(sdCardDir.getCanonicalPath()+File.separator+"aaa"+i+".txt");
+				RandomAccessFile raf=new RandomAccessFile(destFile, "rw");
+				raf.write(("aaa"+i+".txt,Hello!").getBytes());
+				raf.close();
+			}
+		}catch(Exception ex){
+			ex.printStackTrace();
+			System.out.println("Exception invoked!");
+		}
+	}
+
+}

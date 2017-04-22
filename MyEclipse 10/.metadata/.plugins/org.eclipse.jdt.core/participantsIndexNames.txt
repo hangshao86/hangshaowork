@@ -1,0 +1,15 @@
+INDEX VERSION 1.126
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2663939422.index
+\Web\src
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3362297512.index
+\MyWorkService2\src
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1238448376.index
+\uploadImage\src
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2894683755.index
+\ReadImage\src
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\544504254.index
+\InfoSearch\src
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3668214571.index
+\MyWorkService\src
+G:\workspace\MyEclipse 10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2291061506.index
+\Web\src

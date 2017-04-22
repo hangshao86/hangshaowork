@@ -1,0 +1,40 @@
+package com.zqh.mywork;
+
+import com.example.mywork.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+
+public class RequestPasswordActivity extends Activity {
+	EditText user_name;
+	EditText user_email;
+	EditText user_psd;
+	EditText user_psdagain;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.request_password_activity);
+		user_name=(EditText) findViewById(R.id.requestpassword_etname);
+		user_email=(EditText) findViewById(R.id.requestpassword_et_mailboxname);
+		user_psd=(EditText) findViewById(R.id.requestpassword_etpassword);
+		user_psdagain=(EditText) findViewById(R.id.requestpassword_again_etpassword);
+		
+	}
+	public void OnClick(View view){
+		if(!TextUtils.isEmpty(user_name.getText().toString()) && 
+		   !TextUtils.isEmpty(user_email.getText().toString()) &&
+		   !TextUtils.isEmpty(user_psd.getText().toString()) &&
+		   !TextUtils.isEmpty(user_psdagain.getText().toString()))
+		{
+			
+		}
+		else {
+			
+		}
+	}
+
+}

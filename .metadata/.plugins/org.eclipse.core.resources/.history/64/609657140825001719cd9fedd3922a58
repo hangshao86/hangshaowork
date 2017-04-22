@@ -1,0 +1,73 @@
+package com.example.test;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+    private ImageView iV;
+    private Bitmap bitmap;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		iV=(ImageView) findViewById(R.id.iv);
+		/*final Handler myHandler=new Handler(){
+			@Override
+			public void handleMessage(Message msg) {
+				// TODO Auto-generated method stub
+				String response=(String)msg.obj;
+			    byte[] imagebyte=response.getBytes();
+			    InputStream in = new ByteArrayInputStream(imagebyte);
+			    bitmap=BitmapFactory.decodeStream(in);
+			    
+			    iV.setImageBitmap(bitmap);
+				
+				
+			}
+			
+		};
+		new Thread(new Runnable() {
+			public void run() {
+				AccessServer access=new AccessServer("http://10.0.2.2:8080/test/downloadImageServlet");
+				String result=access.doPost(new String[]{"filename"},new String[]{"a.jpg"});
+				Message msg=new Message();
+				msg.what=3;
+				msg.obj=result;
+				
+				myHandler.sendMessage(msg);
+			}
+		}).start();	*/
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

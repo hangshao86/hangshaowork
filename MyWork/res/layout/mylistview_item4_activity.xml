@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mylayout2">"
+    <TextView android:layout_height="30dp"
+        	  android:layout_width="0dp"
+        	  android:layout_weight="1"
+        	  android:id="@+id/tv_item1"
+        	  android:text="@string/hello_world"
+        	  android:gravity="right"
+        	 android:paddingRight="30dp"
+        />
+     <TextView android:layout_height="30dp"
+        	  android:layout_width="0dp"
+        	  android:layout_weight="3"
+        	  android:id="@+id/tv_item2"
+        	  android:text="@string/hello_world"
+        	  android:gravity="right"
+        	  android:paddingRight="30dp"
+        />
+
+</LinearLayout>

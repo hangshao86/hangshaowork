@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="#0084FF"
+        android:orientation="horizontal">
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.27"
+                android:scaleType="fitXY"
+                android:src="@drawable/hang" />
+
+        </LinearLayout>
+        
+        <LinearLayout  
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="62dp"
+            android:text="@string/myname"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        	</RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:text="@string/personalized_signature"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        	 <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        ；			<Button
+        	   android:id="@+id/btn1"
+        	   android:layout_width="20dp"
+        	   android:layout_height="20dp"
+        	   android:layout_marginLeft="10dp"
+        	   android:layout_alignParentBottom="true"
+        	   android:background="@drawable/btnpicture1"
+        			 />
+       		 <Button
+        	   android:id="@+id/btn2"
+        	   android:layout_width="20dp"
+        	   android:layout_height="20dp"
+        	   android:layout_marginLeft="10dp"
+        	   android:layout_alignParentBottom="true"
+        	   android:layout_toRightOf="@+id/btn1"
+        	   android:background="@drawable/btnpicture2"
+        			 />
+       		  <Button
+        	   android:id="@+id/btn3"
+        	   android:layout_width="20dp"
+        	   android:layout_height="20dp"
+        	   android:layout_marginLeft="10dp"
+        	   android:layout_alignParentBottom="true"
+        	   android:layout_toRightOf="@+id/btn2"
+        	   android:background="@drawable/btnpicture3"
+        			 />
+        	</RelativeLayout>
+        </LinearLayout>"
+        </LinearLayout>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+        <ListView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv"
+            />"
+        
+    </LinearLayout>
+    
+
+</LinearLayout>

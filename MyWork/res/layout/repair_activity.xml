@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView android:layout_width="match_parent"
+              android:layout_height="20dp"
+              android:text="@string/domitoryInfo"
+              android:gravity="center"
+			  android:id="@+id/tv_domitoryInfo"
+        />
+    <LinearLayout android:layout_width="match_parent"
+        		  android:layout_height="wrap_content"
+        		  android:layout_below="@+id/tv_domitoryInfo"
+        		  android:id="@+id/repair_ll1"
+        		  android:visibility="gone" >
+    <Spinner android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:id="@+id/sp01"
+            
+             />
+    <TextView android:layout_width="0dp"
+        	  android:layout_height="match_parent"
+        	  android:layout_weight="1"
+        	  android:text="@string/tv_tip"
+        	  android:gravity="center"
+        />
+    <Spinner android:layout_width="0dp"
+        	 android:layout_height="match_parent"
+        	 android:layout_weight="1"
+        	 android:id="@+id/sp02"
+        	 android:gravity="center"
+        	  />"
+	</LinearLayout>
+	
+     <LinearLayout android:layout_width="match_parent"
+        		  android:layout_height="wrap_content"
+        		  android:layout_below="@+id/repair_ll1"
+        		  android:id="@+id/repair_ll2"
+        		  android:visibility="gone"
+        		   >
+    <Spinner android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:id="@+id/sp03"
+            
+             />
+    <TextView android:layout_width="0dp"
+        	  android:layout_height="match_parent"
+        	  android:layout_weight="1"
+        	  android:text="@string/tv_tip"
+        	  android:gravity="center"
+        />
+    <Spinner android:layout_width="0dp"
+        	 android:layout_height="match_parent"
+        	 android:layout_weight="1"
+        	 android:id="@+id/sp04"
+        	 android:gravity="center"
+        	  />
+	</LinearLayout>
+	
+    <LinearLayout android:layout_width="match_parent"
+        		  android:layout_height="wrap_content"
+        		  android:layout_below="@+id/repair_ll2"
+        		  android:id="@+id/repair_ll3"
+        		  android:visibility="gone" >
+    <Spinner android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:id="@+id/sp05"
+            
+             />
+    <TextView android:layout_width="0dp"
+        	  android:layout_height="match_parent"
+        	  android:layout_weight="1"
+        	  android:text="@string/tv_tip"
+        	  android:gravity="center"
+        />
+    <Spinner android:layout_width="0dp"
+        	 android:layout_height="match_parent"
+        	 android:layout_weight="1"
+        	 android:id="@+id/sp06"
+        	 android:gravity="center"
+        	  />
+	</LinearLayout>
+	
+    <LinearLayout android:layout_width="match_parent"
+        		  android:layout_height="wrap_content"
+        		  android:layout_below="@+id/repair_ll3"
+        		  android:id="@+id/repaiir_ll4"
+        		  >
+    <Button android:layout_width="0dp"
+        	android:layout_height="match_parent"
+        	android:layout_weight="1"
+        	android:onClick="OnClick"
+        	android:text="@string/btn_decrease"
+        	android:id="@+id/btn_decrease"
+        	android:background="#F43707"
+        	/>
+     <Button android:layout_width="0dp"
+        	android:layout_height="match_parent"
+        	android:layout_weight="1"
+        	android:onClick="OnClick"
+        	android:text="@string/btn_increase"
+        	android:id="@+id/btn_increase"
+        	android:background="#FFCE44"
+        	/>
+        
+    </LinearLayout>
+	<Button android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:id="@+id/submit"
+	    	android:background="#6FD917"
+	    	android:layout_alignParentBottom="true"
+	    	android:text="@string/btn_submit"
+	    	android:onClick="OnClick"
+	    	/>
+	<EditText android:layout_width="match_parent"
+	    	  android:layout_height="wrap_content"
+	    	  android:id="@+id/repair_edittext"
+	    	  android:layout_below="@+id/repaiir_ll4"
+	    	  android:hint="@string/edittext_hint"
+	    	  />
+     
+	<!-- <LinearLayout android:layout_width="match_parent" >
+	    
+	</LinearLayout> -->
+</RelativeLayout>

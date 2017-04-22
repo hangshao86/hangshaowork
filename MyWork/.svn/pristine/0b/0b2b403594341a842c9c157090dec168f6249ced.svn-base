@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost" >
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"  />
+        <TabWidget 
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone"/>
+        <RadioGroup 
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/rg"
+            android:background="@drawable/maintab_toolbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                 android:id="@+id/radio_button0"
+                 android:layout_marginTop="2dp"
+                 android:text="@string/home_page"
+                 android:drawableTop="@drawable/icon_1_n"
+                 style="@style/main_tab_bottom"
+                  />
+            <RadioButton
+                android:id="@+id/radio_button1"
+                android:layout_marginTop="2dp"
+                android:text="@string/more_one"
+                android:drawableTop="@drawable/icon_2_n"
+                style="@style/main_tab_bottom"
+                />
+            <RadioButton
+                android:id="@+id/radio_button2"
+                android:layout_marginTop="2dp"
+                android:text="@string/more_two"
+                android:drawableTop="@drawable/icon_3_n"
+                style="@style/main_tab_bottom"
+                />
+            <RadioButton
+                android:id="@+id/radio_button3"
+                android:layout_marginTop="2dp"
+                android:text="@string/mine"
+                android:drawableTop="@drawable/icon_4_n"
+                style="@style/main_tab_bottom"
+                />"
+        </RadioGroup>"
+    </LinearLayout>
+
+</TabHost>

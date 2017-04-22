@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+myeclipseTomcatServer.MyWorkService2.IEARProjectName=
+myeclipseTomcatServer.MyWorkService2.altContextRoot=/MyWorkService2
+myeclipseTomcatServer.MyWorkService2.contextRoot=/MyWorkService2
+myeclipseTomcatServer.MyWorkService2.deployIsOverProject=false
+myeclipseTomcatServer.MyWorkService2.deploymentPath=G\:\\workspace\\MyEclipse 10\\.metadata\\.me_tcat\\webapps\\MyWorkService2
+myeclipseTomcatServer.MyWorkService2.isDeployed=true
+myeclipseTomcatServer.MyWorkService2.isExploded=true
+myeclipseTomcatServer.MyWorkService2.isUptoDate=true
+myeclipseTomcatServer.MyWorkService2.noFileCopy=false
+myeclipseTomcatServer.MyWorkService2.shouldBackup=false
+myeclipseTomcatServer.MyWorkService2.shouldOverwrite=false
+myeclipseTomcatServer.MyWorkService2.type=WebDeployment

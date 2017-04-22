@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="15dp"
+               android:src="@drawable/gg"
+               android:maxHeight="15dp"
+               android:adjustViewBounds="true"
+               
+               android:id="@+id/iv_university" 
+        />
+    <ImageView android:layout_width="80dp"
+        	   android:layout_height="80dp"
+        	   android:src="@drawable/ic_launcher"
+        	   android:layout_below="@+id/iv_university"
+        	   android:id="@+id/iv_club_image"
+        	   android:scaleType="centerCrop"
+        />
+    <TextView  android:layout_width="match_parent"
+        	   android:layout_height="16dp"
+        	   android:layout_toRightOf="@+id/iv_club_image"
+        	   android:layout_marginLeft="10dp"
+        	   android:id="@+id/tv_club_name"
+        	   android:layout_below="@+id/iv_university"
+        	   android:text="@string/clubname1"
+        />
+     <TextView  android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_toRightOf="@+id/iv_club_image"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_theme"
+                android:layout_below="@+id/tv_club_name"
+                android:text="@string/clubtheme" 
+                 />
+     <TextView  android:layout_width="match_parent"
+         		android:layout_height="16dp"
+         		android:layout_toRightOf="@+id/iv_club_image"
+         		android:layout_marginLeft="10dp"
+         		android:id="@+id/tv_time"
+         		android:layout_below="@+id/tv_theme"
+         		android:text="@string/clubtime"  
+         />
+    <TextView   android:layout_width="wrap_content"
+        		android:layout_height="16dp" 
+        		android:layout_toRightOf="@+id/iv_club_image"
+        		android:layout_marginLeft="10dp"
+        		android:id="@+id/tv_adress"
+        		android:layout_below="@+id/tv_time"
+        		android:text="@string/clubaddress"
+        />
+    <TextView   android:layout_width="match_parent"
+        		android:layout_height="16dp"
+        		android:layout_toRightOf="@+id/iv_club_image"
+        		android:layout_marginLeft="10dp"
+        		android:id="@+id/tv_patron"
+        		android:layout_below="@+id/tv_adress"
+        		android:text="@string/clubpatron"
+        />
+    <TextView   android:layout_width="match_parent"
+        		android:layout_height="30dp"
+        		android:layout_below="@+id/iv_club_image"
+        		android:hint="备注"
+        		android:id="@+id/tv_remark"
+        		android:text="@string/clubremark"
+        />
+    <LinearLayout android:layout_width="match_parent"
+        		  android:layout_height="80dp"
+        		  android:layout_below="@+id/tv_remark"
+        		  android:id="@+id/ll"
+        		  
+         >
+          <ImageView android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:id="@+id/iv_club1"
+                   android:src="@drawable/ic_launcher"
+                   />
+          <ImageView android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:id="@+id/iv_club2"
+                   android:src="@drawable/ic_launcher"
+                   />
+           <ImageView android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:id="@+id/iv_club3"
+                   android:src="@drawable/ic_launcher"
+                   />
+        
+    </LinearLayout>
+    <Button android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/ll"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/comment"
+            android:id="@+id/btn_comment"
+        />
+     <Button android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/btn_comment"
+            android:layout_below="@+id/ll"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/praise"
+            android:id="@+id/btn_praise"
+        />
+   
+</RelativeLayout>

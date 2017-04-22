@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:layout_margin="25dp" >
+    
+<RelativeLayout android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:id="@+id/register_l1"
+             
+     >
+    <TextView android:layout_width="70sp"
+        	  android:layout_height="match_parent"
+        	  android:text="@string/register_name"
+        	  android:id="@+id/register_tv1"
+        	  style="@style/register_textview"
+        	  />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="29dp"
+              android:id="@+id/register_etname"
+              android:background="@drawable/btn_backgroup"
+              android:layout_toRightOf="@+id/register_tv1"
+              android:hint="@string/hint_username"
+              android:singleLine="true"
+              />
+    <TextView android:layout_width="match_parent"
+              android:layout_height="11dp"
+              android:id="@+id/register_errortip_name"
+              android:layout_toRightOf="@+id/register_tv1"
+              android:layout_below="@+id/register_etname"
+              android:text="@string/hello_world"
+              style="@style/register_errortip_textview"
+              
+        />
+</RelativeLayout>
+
+<RelativeLayout android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/register_l4"
+             	android:layout_below="@+id/register_l1"
+     >
+    <TextView android:layout_width="70sp"
+        	  android:layout_height="match_parent"
+        	  android:text="@string/register_mailbox"
+        	  android:id="@+id/register_tv4"
+        	  style="@style/register_textview"
+        	  />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="29dp"
+              android:id="@+id/register_et_mailboxname"
+              android:singleLine="true"
+              android:background="@drawable/btn_backgroup"
+              android:layout_toRightOf="@+id/register_tv4"
+              android:hint="@string/register_hint2"
+              />
+    <TextView android:layout_width="match_parent"
+              android:layout_height="11dp"
+              android:id="@+id/register_errortip_mailbox"
+              android:layout_toRightOf="@+id/register_tv4_"
+              android:layout_below="@+id/register_et_mailboxname"
+              android:text="@string/hello_world"
+              style="@style/register_errortip_textview"
+              
+        />
+</RelativeLayout>
+
+<RelativeLayout android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/register_l5"
+             	android:layout_below="@+id/register_l4"
+     >
+    <TextView android:layout_width="70sp"
+        	  android:layout_height="match_parent"
+        	  android:text="@string/register_dormitory"
+        	  android:id="@+id/register_tv5"
+        	  style="@style/register_textview"
+        	  />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="29dp"
+              android:id="@+id/register_et_dormitoryname"
+              android:background="@drawable/btn_backgroup"
+              android:layout_toRightOf="@+id/register_tv5"
+              android:hint="@string/register_hint3"
+              android:singleLine="true"
+              />
+    <TextView android:layout_width="match_parent"
+              android:layout_height="11dp"
+              android:id="@+id/register_errortip_dormitory"
+              android:layout_toRightOf="@+id/register_dormitory"
+              android:layout_below="@+id/register_et_dormitoryname"
+              android:text="@string/hello_world"
+              style="@style/register_errortip_textview"
+              
+        />
+</RelativeLayout>
+
+<RelativeLayout android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:id="@+id/register_l2"
+              android:layout_below="@+id/register_l5"
+              
+     >
+    <TextView android:layout_width="70sp"
+        	  android:layout_height="match_parent"
+        	  android:text="@string/register_password"
+        	  android:id="@+id/register_tv2"
+        	  style="@style/register_textview"
+        	  />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="29dp"
+              android:id="@+id/register_etpassword"
+              android:background="@drawable/btn_backgroup"
+              android:layout_toRightOf="@+id/register_tv2"
+              android:hint="@string/hint_password"
+              android:password="true"
+              android:singleLine="true"
+              />
+    <TextView android:layout_width="match_parent"
+              android:layout_height="11dp"
+              android:id="@+id/register_errortip_password"
+              android:layout_toRightOf="@+id/register_tv2"
+              android:layout_below="@+id/register_etpassword"
+              android:text="@string/hello_world"
+              style="@style/register_errortip_textview"
+              
+        />
+</RelativeLayout>
+
+<RelativeLayout android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:id="@+id/register_l3"
+              android:layout_below="@+id/register_l2"
+              
+     >
+    <TextView android:layout_width="70sp"
+        	  android:layout_height="match_parent"
+        	  android:text="@string/register_again_password"
+        	  android:id="@+id/register_tv3"
+        	  style="@style/register_textview"
+        	  />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="29dp"
+              android:id="@+id/register_again_etpassword"
+              android:background="@drawable/btn_backgroup"
+              android:layout_toRightOf="@+id/register_tv3"
+              android:hint="@string/register_hint"
+              android:singleLine="true"
+              android:password="true"
+              />
+    <TextView android:layout_width="match_parent"
+              android:layout_height="11dp"
+              android:id="@+id/register_errortip_again_password"
+              android:layout_toRightOf="@+id/register_tv3"
+              android:layout_below="@+id/register_again_etpassword"
+              android:text="@string/hello_world"
+              style="@style/register_errortip_textview"
+              
+        />
+</RelativeLayout>
+<Button android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/btn_verify"
+        android:text="@string/btn_register"
+        android:layout_below="@+id/register_l3"
+        android:layout_marginTop="20dp"
+        android:background="#008AD4"
+        android:textColor="#fff"
+        android:onClick="OnClick"
+         />
+</RelativeLayout>
