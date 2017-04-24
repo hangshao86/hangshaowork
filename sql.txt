@@ -1,0 +1,29 @@
+create table bill(
+bill_id int(11) not null auto_increment,
+user_dormitory varchar(20) not null,
+year int(4),
+month int(2),
+monthly_settlement_date int(2),
+electric_charge float(5,2),
+water_charge float(5,2),
+Internet_charge float(5,2),
+tatol_charge float(5,2),
+last_month_balance int(4),
+this_month_given  int(4),
+this_month_return int(4),
+this_month_recharge int(4),
+this_month_balance int(4),
+status tinyint(1),
+primary key(bill_id)
+);
+
+insert into bill
+(user_dormitory,year,month,monthly_settlement_date,electric_charge,water_charge,
+Internet_charge,tatol_charge,last_month_balance,this_month_given,this_month_return ,
+this_month_recharge,this_month_balance,status) 
+values('西一533','2016','5','15','56.00','56.00','30.00','142.00','20.00','0.00','30.00','0.00','200.00',1);
+
+insert into bill
+(user_dormitory,year,month,monthly_settlement_date,electric_charge,water_charge,
+Internet_charge,tatol_charge,status) 
+values('西一531','2016','5','15','56.00','56.00','30.00','142.00',1);
